@@ -1,2 +1,259 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+// Design tokens sourced from Figma "Design System" file
+// https://www.figma.com/design/Yi2WE60FH4kczcuSNET0lk/Design-System?node-id=395-247
+//
+// NOTE: pulled by reading the token-documentation frames (Colors, Typography,
+// "Shadows, corner radius, and spacing" sections) — Figma's native Variables API
+// (get_variable_defs) was not reachable in the session that authored this file.
+// Values were confirmed against the file by the design owner. If Variables
+// access is available later, cross-check names/values against the real
+// Variables collections and adjust here if they differ.
+
+:root {
+  // ---------------------------------------------------------------------
+  // Fonts
+  // ---------------------------------------------------------------------
+  --font-family-headings: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
+  --font-family-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  // Type scale — Heading (Bricolage Grotesque)
+  --heading-xl-size: 24px;
+  --heading-xl-weight: var(--font-weight-extrabold);
+  --heading-l-size: 20px;
+  --heading-l-weight: var(--font-weight-extrabold);
+  --heading-m-size: 18px;
+  --heading-m-weight: var(--font-weight-bold);
+  --heading-s-size: 16px;
+  --heading-s-weight: var(--font-weight-bold);
+
+  // Type scale — Label (Inter)
+  --label-xl-size: 18px;
+  --label-xl-weight: var(--font-weight-bold);
+  --label-l-size: 16px;
+  --label-l-weight: var(--font-weight-semibold);
+  --label-m-size: 14px;
+  --label-m-weight: var(--font-weight-medium);
+  --label-s-size: 12px;
+  --label-s-weight: var(--font-weight-medium);
+
+  // Type scale — Body (Inter)
+  --body-xl-size: 18px;
+  --body-xl-weight: var(--font-weight-semibold);
+  --body-l-size: 16px;
+  --body-l-weight: var(--font-weight-medium);
+  --body-m-size: 14px;
+  --body-m-weight: var(--font-weight-regular);
+  --body-s-size: 12px;
+  --body-s-weight: var(--font-weight-regular);
+
+  // Type scale — Button (Inter)
+  --button-xl-size: 18px;
+  --button-xl-weight: var(--font-weight-bold);
+  --button-l-size: 16px;
+  --button-l-weight: var(--font-weight-medium);
+  --button-m-size: 14px;
+  --button-m-weight: var(--font-weight-medium);
+  --button-s-size: 12px;
+  --button-s-weight: var(--font-weight-regular);
+  --button-link-size: 16px;
+  --button-link-weight: var(--font-weight-semibold);
+  --button-small-link-size: 14px;
+  --button-small-link-weight: var(--font-weight-semibold);
+  --button-xs-link-size: 12px;
+  --button-xs-link-weight: var(--font-weight-semibold);
+
+  // ---------------------------------------------------------------------
+  // Colors — raw palette
+  // ---------------------------------------------------------------------
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-blue-10: #d3e0fb;
+  --color-blue-20: #b6cbf8;
+  --color-blue-30: #92b1f5;
+  --color-blue-40: #6e97f2;
+  --color-blue-50: #497dee;
+  --color-blue-60: #1f53c4;
+  --color-blue-70: #19429d;
+  --color-blue-80: #133276;
+  --color-blue-90: #0c214e;
+  --color-blue-100: #07142f;
+
+  // ---------------------------------------------------------------------
+  // Colors — semantic tokens
+  // ---------------------------------------------------------------------
+
+  // Text
+  --color-text-primary: #00164e;
+  --color-text-secondary: #223577;
+  --color-text-tertiary: #6e6d9a;
+
+  // CTA
+  --color-cta-primary: #2563eb;
+  --color-cta-destructive: #dc2626;
+  --color-cta-disabled: #d1d5db;
+
+  // Surface
+  --color-surface-white: #ffffff;
+  --color-surface-background: #fdfdfd;
+  --color-surface-foreground: #f9f9f9;
+  --color-surface-blue-shade: #ecf2fe;
+  --color-surface-yellow-shade: #fdf8ed;
+  --color-surface-soft-red: #fee2e2;
+  --color-surface-navbar: #022d8f;
+  --color-surface-secondary: #ffb902;
+  --color-surface-yellow-shade-2: #ffce4e;
+
+  // Outline
+  --color-outline-extralight: #f3f4f6;
+  --color-outline-light: #e5e7eb;
+  --color-outline-regular: #d1d5db;
+
+  // Status
+  --color-status-positive: #56d278;
+  --color-status-neutral-1: #eab308;
+  --color-status-neutral-2: #5e2bff;
+  --color-status-warning: #f97316;
+  --color-status-negative: #dc2626;
+  --color-status-other: #65def1;
+
+  // ---------------------------------------------------------------------
+  // Radius
+  // ---------------------------------------------------------------------
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-xl: 16px;
+  --radius-circle: 1000px;
+
+  // ---------------------------------------------------------------------
+  // Spacing
+  // ---------------------------------------------------------------------
+  --space-xs: 2px;
+  --space-s: 4px;
+  --space-m: 8px;
+  --space-l: 12px;
+  --space-xl: 16px;
+  --space-xxl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 48px;
+  --space-5xl: 64px;
+}
+
+// ---------------------------------------------------------------------
+// Typography utility classes — one per named text style in the design system
+// ---------------------------------------------------------------------
+.heading-xl,
+.heading-l,
+.heading-m,
+.heading-s {
+  font-family: var(--font-family-headings);
+  margin: 0;
+}
+
+.heading-xl {
+  font-size: var(--heading-xl-size);
+  font-weight: var(--heading-xl-weight);
+}
+.heading-l {
+  font-size: var(--heading-l-size);
+  font-weight: var(--heading-l-weight);
+}
+.heading-m {
+  font-size: var(--heading-m-size);
+  font-weight: var(--heading-m-weight);
+}
+.heading-s {
+  font-size: var(--heading-s-size);
+  font-weight: var(--heading-s-weight);
+}
+
+.label-xl,
+.label-l,
+.label-m,
+.label-s,
+.body-xl,
+.body-l,
+.body-m,
+.body-s,
+.button-xl,
+.button-l,
+.button-m,
+.button-s,
+.button-link,
+.button-small-link,
+.button-xs-link {
+  font-family: var(--font-family-body);
+  margin: 0;
+}
+
+.label-xl {
+  font-size: var(--label-xl-size);
+  font-weight: var(--label-xl-weight);
+}
+.label-l {
+  font-size: var(--label-l-size);
+  font-weight: var(--label-l-weight);
+}
+.label-m {
+  font-size: var(--label-m-size);
+  font-weight: var(--label-m-weight);
+}
+.label-s {
+  font-size: var(--label-s-size);
+  font-weight: var(--label-s-weight);
+}
+
+.body-xl {
+  font-size: var(--body-xl-size);
+  font-weight: var(--body-xl-weight);
+}
+.body-l {
+  font-size: var(--body-l-size);
+  font-weight: var(--body-l-weight);
+}
+.body-m {
+  font-size: var(--body-m-size);
+  font-weight: var(--body-m-weight);
+}
+.body-s {
+  font-size: var(--body-s-size);
+  font-weight: var(--body-s-weight);
+}
+
+.button-xl {
+  font-size: var(--button-xl-size);
+  font-weight: var(--button-xl-weight);
+}
+.button-l {
+  font-size: var(--button-l-size);
+  font-weight: var(--button-l-weight);
+}
+.button-m {
+  font-size: var(--button-m-size);
+  font-weight: var(--button-m-weight);
+}
+.button-s {
+  font-size: var(--button-s-size);
+  font-weight: var(--button-s-weight);
+}
+.button-link {
+  font-size: var(--button-link-size);
+  font-weight: var(--button-link-weight);
+  text-decoration: underline;
+}
+.button-small-link {
+  font-size: var(--button-small-link-size);
+  font-weight: var(--button-small-link-weight);
+  text-decoration: underline;
+}
+.button-xs-link {
+  font-size: var(--button-xs-link-size);
+  font-weight: var(--button-xs-link-weight);
+  text-decoration: underline;
+}

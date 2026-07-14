@@ -1,0 +1,7 @@
+{
+  "name": "LivSYT",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
